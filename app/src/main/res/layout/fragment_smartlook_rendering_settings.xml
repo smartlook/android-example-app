@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fillViewport="true">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <TextView
+            android:id="@+id/textRecordTitle"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="20dp"
+            android:paddingBottom="10dp"
+            android:text="Rendering"
+            android:textColor="?attr/colorOnSurface"
+            android:textSize="20sp"
+            android:textStyle="bold"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <org.schabi.newpipe.views.smartlook.SmartlookSettingsPreferenceView
+            android:id="@+id/modeView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:layout_constraintTop_toBottomOf="@id/textRecordTitle"
+            app:sm_title="Rendering" />
+
+        <org.schabi.newpipe.views.smartlook.SmartlookSettingsPreferenceView
+            android:id="@+id/optionView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:layout_constraintTop_toBottomOf="@id/modeView"
+            app:sm_title="Option" />
+
+        <View
+            android:id="@+id/renderingDivider"
+            android:layout_width="match_parent"
+            android:layout_height="4dp"
+            android:layout_marginTop="20dp"
+            android:background="@color/middle_gray"
+            app:layout_constraintTop_toBottomOf="@id/optionView" />
+
+        <TextView
+            android:id="@+id/framerateTitle"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="20dp"
+            android:paddingBottom="10dp"
+            android:text="Framerate"
+            android:textColor="?attr/colorOnSurface"
+            android:textSize="20sp"
+            android:textStyle="bold"
+            app:layout_constraintTop_toBottomOf="@id/renderingDivider" />
+
+        <org.schabi.newpipe.views.smartlook.SmartlookSettingsPreferenceSwitchView
+            android:id="@+id/adaptiveFramerateView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:layout_constraintTop_toBottomOf="@id/framerateTitle"
+            app:sm_title="Adaptive framerate" />
+
+        <org.schabi.newpipe.views.smartlook.SmartlookSettingsPreferenceSliderView
+            android:id="@+id/framerateView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:layout_constraintTop_toBottomOf="@id/adaptiveFramerateView"
+            app:sm_title="Framerate" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</ScrollView>

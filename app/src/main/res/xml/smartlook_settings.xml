@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:key="smartlook_preferences"
+    android:title="@string/settings_category_history_title">
+
+    <PreferenceCategory
+        android:layout="@layout/settings_category_header_layout"
+        android:title="Record"
+        app:iconSpaceReserved="false">
+
+        <Preference
+            android:key="@string/metadata_cache_wipe_key"
+            android:summary="@string/metadata_cache_wipe_summary"
+            android:title="Rendering"
+            app:iconSpaceReserved="false" />
+
+    </PreferenceCategory>
+
+    <PreferenceCategory
+        android:layout="@layout/settings_category_header_layout"
+        android:title="Privacy"
+        app:iconSpaceReserved="false">
+
+        <Preference
+            android:key="@string/metadata_cache_wipe_key"
+            android:summary="@string/metadata_cache_wipe_summary"
+            android:title="@string/metadata_cache_wipe_title"
+            app:iconSpaceReserved="false" />
+
+    </PreferenceCategory>
+
+    <PreferenceCategory
+        android:layout="@layout/settings_category_header_layout"
+        android:title="Analytics"
+        app:iconSpaceReserved="false">
+
+        <Preference
+            android:key="@string/metadata_cache_wipe_key"
+            android:summary="@string/metadata_cache_wipe_summary"
+            android:title="@string/metadata_cache_wipe_title"
+            app:iconSpaceReserved="false" />
+
+    </PreferenceCategory>
+
+    <PreferenceCategory
+        android:layout="@layout/settings_category_header_layout"
+        android:title="Consent"
+        app:iconSpaceReserved="false">
+
+        <Preference
+            android:key="@string/metadata_cache_wipe_key"
+            android:summary="@string/metadata_cache_wipe_summary"
+            android:title="@string/metadata_cache_wipe_title"
+            app:iconSpaceReserved="false" />
+
+    </PreferenceCategory>
+
+</PreferenceScreen>

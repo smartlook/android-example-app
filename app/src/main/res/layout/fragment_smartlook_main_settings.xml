@@ -1,0 +1,177 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fillViewport="true"
+    tools:background="@color/dark_background_color">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingBottom="100dp">
+
+        <TextView
+            android:id="@+id/textRecordTitle"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="20dp"
+            android:paddingBottom="10dp"
+            android:text="Record"
+            android:textColor="?attr/colorOnSurface"
+            android:textSize="20sp"
+            android:textStyle="bold"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <org.schabi.newpipe.views.smartlook.SmartlookSettingsPreferenceView
+            android:id="@+id/renderingView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:layout_constraintTop_toBottomOf="@id/textRecordTitle"
+            app:sm_hasValue="false"
+            app:sm_title="Rendering" />
+
+        <TextView
+            android:id="@+id/renderingDescriptionText"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginEnd="16dp"
+            android:text="Here it is possible to adjust the rendering method and other parameters for the entire application."
+            app:layout_constraintTop_toBottomOf="@id/renderingView" />
+
+        <View
+            android:id="@+id/renderingDivider"
+            android:layout_width="match_parent"
+            android:layout_height="4dp"
+            android:layout_marginTop="20dp"
+            android:background="@color/middle_gray"
+            app:layout_constraintTop_toBottomOf="@id/renderingDescriptionText" />
+
+        <TextView
+            android:id="@+id/textPrivacyTitle"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="20dp"
+            android:paddingBottom="10dp"
+            android:text="Privacy"
+            android:textColor="?attr/colorOnSurface"
+            android:textSize="20sp"
+            android:textStyle="bold"
+            app:layout_constraintTop_toBottomOf="@id/renderingDivider" />
+
+        <org.schabi.newpipe.views.smartlook.SmartlookSettingsPreferenceView
+            android:id="@+id/denyListView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:layout_constraintTop_toBottomOf="@id/textPrivacyTitle"
+            app:sm_title="Deny list"
+            app:sm_value="2" />
+
+        <org.schabi.newpipe.views.smartlook.SmartlookSettingsPreferenceView
+            android:id="@+id/userIdentificationView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:layout_constraintTop_toBottomOf="@id/denyListView"
+            app:sm_title="User identification" />
+
+        <org.schabi.newpipe.views.smartlook.SmartlookSettingsPreferenceView
+            android:id="@+id/sessionPropertiesView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:layout_constraintTop_toBottomOf="@id/userIdentificationView"
+            app:sm_title="Session properties" />
+
+        <TextView
+            android:id="@+id/privacyDescriptionText"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginEnd="16dp"
+            android:text="Deny list contains a list of sensitive components that are in the SDK by default hidden locally on the device."
+            app:layout_constraintTop_toBottomOf="@id/sessionPropertiesView" />
+
+        <View
+            android:id="@+id/privacyDivider"
+            android:layout_width="match_parent"
+            android:layout_height="4dp"
+            android:layout_marginTop="20dp"
+            android:background="@color/middle_gray"
+            app:layout_constraintTop_toBottomOf="@id/privacyDescriptionText" />
+
+        <TextView
+            android:id="@+id/analyticsTitle"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="20dp"
+            android:paddingBottom="10dp"
+            android:text="Analytics"
+            android:textColor="?attr/colorOnSurface"
+            android:textSize="20sp"
+            android:textStyle="bold"
+            app:layout_constraintTop_toBottomOf="@id/privacyDivider" />
+
+        <org.schabi.newpipe.views.smartlook.SmartlookSettingsPreferenceView
+            android:id="@+id/eventTrackingView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:layout_constraintTop_toBottomOf="@id/analyticsTitle"
+            app:sm_title="Event tracking"
+            app:sm_value="Full" />
+
+        <org.schabi.newpipe.views.smartlook.SmartlookSettingsPreferenceView
+            android:id="@+id/globalPropertiesView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:layout_constraintTop_toBottomOf="@id/eventTrackingView"
+            app:sm_title="Global properties"
+            app:sm_value="0" />
+
+        <TextView
+            android:id="@+id/analyticsDescriptionText"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginEnd="16dp"
+            android:text="Event tracking allows disable some automatically detected events due to security or usability reasons."
+            app:layout_constraintTop_toBottomOf="@id/globalPropertiesView" />
+
+        <View
+            android:id="@+id/consentDivider"
+            android:layout_width="match_parent"
+            android:layout_height="4dp"
+            android:layout_marginTop="20dp"
+            android:background="@color/middle_gray"
+            app:layout_constraintTop_toBottomOf="@id/analyticsDescriptionText" />
+
+        <TextView
+            android:id="@+id/textConsentTitle"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="20dp"
+            android:paddingBottom="10dp"
+            android:text="Consent SDK"
+            android:textColor="?attr/colorOnSurface"
+            android:textSize="20sp"
+            android:textStyle="bold"
+            app:layout_constraintTop_toBottomOf="@id/consentDivider" />
+
+        <org.schabi.newpipe.views.smartlook.SmartlookSettingsPreferenceView
+            android:id="@+id/consentView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:layout_constraintTop_toBottomOf="@id/textConsentTitle"
+            app:sm_hasValue="false"
+            app:sm_title="Review consent" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</ScrollView>
